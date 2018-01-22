@@ -1095,7 +1095,6 @@ static tileidx_t _zombie_tile_to_skeleton(const tileidx_t z_tile)
     case TILEP_MONS_ZOMBIE_GNOLL:
     case TILEP_MONS_ZOMBIE_ORC:
     case TILEP_MONS_ZOMBIE_HUMAN:
-    case TILEP_MONS_ZOMBIE_DRACONIAN:
     case TILEP_MONS_ZOMBIE_ELF:
     case TILEP_MONS_ZOMBIE_MERFOLK:
     case TILEP_MONS_ZOMBIE_MINOTAUR:
@@ -1157,6 +1156,8 @@ static tileidx_t _zombie_tile_to_skeleton(const tileidx_t z_tile)
         return TILEP_MONS_SKELETON_DRAKE;
     case TILEP_MONS_ZOMBIE_UGLY_THING:
         return TILEP_MONS_SKELETON_UGLY_THING;
+    case TILEP_MONS_ZOMBIE_DRACONIAN:
+        return TILEP_MONS_SKELETON_DRACONIAN;
     default:
         if (tile_player_basetile(z_tile) == TILEP_MONS_ZOMBIE_HYDRA)
         {
@@ -1252,6 +1253,8 @@ static tileidx_t _mon_to_zombie_tile(const monster_info &mon)
         { MONS_SALAMANDER,              TILEP_MONS_ZOMBIE_SALAMANDER, },
         { MONS_SPRIGGAN,                TILEP_MONS_ZOMBIE_SPRIGGAN, },
         { MONS_YAKTAUR,                 TILEP_MONS_ZOMBIE_YAKTAUR, },
+        { MONS_YAK,                     TILEP_MONS_ZOMBIE_YAK, },
+        { MONS_BEAR,                    TILEP_MONS_ZOMBIE_BEAR, },
     };
 
     struct shape_size_tiles
@@ -1676,6 +1679,19 @@ static tileidx_t _tileidx_monster_no_props(const monster_info& mon)
                 return TILEP_MONS_AGNES_STAVELESS;
         }
 
+        case MONS_ERICA:
+        {
+            // For if Erica loses her flaming scimitar
+            const item_def * const weapon = mon.inv[MSLOT_WEAPON].get();
+            if (weapon
+                && weapon->is_type(OBJ_WEAPONS, WPN_SCIMITAR)
+                && weapon->brand == SPWPN_FLAMING)
+            {
+                return TILEP_MONS_ERICA;
+            }
+            else
+                return TILEP_MONS_ERICA_SWORDLESS;
+        }
 
         case MONS_BUSH:
             if (env.map_knowledge(mon.pos).cloud() == CLOUD_FIRE)
@@ -3935,6 +3951,7 @@ void tile_init_props(monster* mon)
         case MONS_BLOCK_OF_ICE:
         case MONS_BUTTERFLY:
         case MONS_HUMAN:
+        case MONS_DEEP_ELF_ELEMENTALIST:
             break;
         default:
             return;
