@@ -1,293 +1,289 @@
-###############################################################################
-# Monster titles.
-# Displayed when they first come into view and on their description screen.
-#########
 %%%%
-Agnes title
-
 Agnes the Wanderer
-%%%%
-Aizul title
 
+放浪者『アグネス』
+%%%%
 Aizul the Neglectful Guardian
-%%%%
-Antaeus title
 
+怠慢なる番人『アイズル』
+%%%%
 Antaeus, Guardian of Cocytus
-%%%%
-Arachne title
 
+コキュートスの番人『アンテウス』
+%%%%
 Arachne the Weaver
-%%%%
-Asmodeus title
 
+糸の編み手『アラクネ』
+%%%%
 Asmodeus, Prince of Gehenna
-%%%%
-Asterion title
 
+ゲヘナの王子『アスモデウス』
+%%%%
 Asterion the Fallen King
-%%%%
-Azrael title
 
+堕落せし王『アステリオン』
+%%%%
 Azrael the Boundless Flame
-%%%%
-Bai Suzhen title
 
+永劫の炎の『アズラエル』
+%%%%
 Bai Suzhen, Madame White Snake
-%%%%
-Boris title
 
+白蛇の婦人『白娘子』
+%%%%
 Boris, Master of Life and Death
-%%%%
-Cerebov title
 
+生と死の熟達者『ボリス』
+%%%%
 Cerebov, Demon Lord of Fire and Steel
-%%%%
-Chuck title
 
+炎と鉄の魔王『セレボブ』
+%%%%
 Chuck the Collector
-%%%%
-Crazy Yiuf title
 
+収集者『チャック』
+%%%%
 Crazy Yiuf the Enlightened
-%%%%
-Dispater title
 
+啓蒙されし『狂人ヰゥフ』
+%%%%
 Dispater, Lord of the Iron City
-%%%%
-Dissolution title
 
+鉄の都の王『ディスペータ』
+%%%%
 Dissolution, High Priest of Jiyva
-%%%%
-Donald title
 
+ジーヴァの大司祭『溶解者』
+%%%%
 Donald the Adventurer
-%%%%
-Dowan title
 
+冒険者『ドナルド』
+%%%%
 Dowan, Brother of Duvessa
-%%%%
-Duvessa title
 
+デュヴェッサの双子の兄『ドウェン』
+%%%%
 Duvessa, Sister of Dowan
-%%%%
-Edmund title
 
+ドウェンの双子の妹『デュヴェッサ』
+%%%%
 Edmund the Younger
-%%%%
-Ereshkigal title
 
+シグムンドの弟『エドマンド』
+%%%%
 Ereshkigal, Queen of Tartarus
-%%%%
-Erica title
 
+タルタロスの女王『エレシュキガル』
+%%%%
 Erica the Fiery-Tempered
-%%%%
-Erolcha title
 
+燃えさかる気性の『エリカ』
+%%%%
 Erolcha the Cunning
-%%%%
-Eustachio title
 
+狡猾なる『エロルカ』
+%%%%
 Eustachio the Magnificent
-%%%%
-Fannar title
 
+偉大なる『エウスタキオ』
+%%%%
 Fannar the Cold-Hearted
-%%%%
-Frances title
 
+冷血なる『ファンナール』
+%%%%
 Frances, Duchess of Pandemonium
-%%%%
-Frederick title
 
+パンデモニウムの女公爵『フランセス』
+%%%%
 Frederick the Flawless
-%%%%
-Gastronok title
 
+完全無欠の『フレデリック』
+%%%%
 Gastronok the Ponderous
-%%%%
-Geryon title
 
+重厚なる『ガストロノク』
+%%%%
 Geryon, Gatekeeper of Hell
-%%%%
-Gloorx Vloq title
 
+地獄の門番『ゲリュオン』
+%%%%
 Gloorx Vloq, Demon Lord of Darkness
-%%%%
-Grum title
 
+暗闇の魔王『グロオルクス・ヴロック』
+%%%%
 Grum the Hunter
-%%%%
-Harold title
 
+狩人『グルム』
+%%%%
 Harold the Weathered
-%%%%
-Ignacio title
 
+年月を重ねしもの『ハロルド』
+%%%%
 Ignacio, Master of Excruciating Pain
-%%%%
-Ilsuiw title
 
+処刑の達人『イグナシオ』
+%%%%
 Ilsuiw, Witch of the Tides
-%%%%
-Ijyb title
 
+海流の魔女『イルスィウ』
+%%%%
 Ijyb the Twisted Goblin
-%%%%
-Jessica title
 
+捻じ曲がりしゴブリン『イジェィブ』
+%%%%
 Jessica the Apprentice Sorceress
-%%%%
-Jorgrun title
 
+見習い魔法使い『ジェシカ』
+%%%%
 Jorgrun Earthshaker
-%%%%
-Jory title
 
+大地を揺らす者『ジョーグルン』
+%%%%
 Jory the Bloodstained Count
-%%%%
-Joseph title
 
+血まみれ伯爵『ジョリー』
+%%%%
 Joseph, a Mercenary
-%%%%
-Josephine title
 
+傭兵『ジョセフ』
+%%%%
 Josephine the Decaying Necromancer
-%%%%
-Khufu title
 
+腐敗せる死人使い『ジョセフィーヌ』
+%%%%
 Khufu the Undying Pharaoh
-%%%%
-Kirke title
 
+不滅のファラオ『クフ王』
+%%%%
 Kirke, Weaver of Myths
-%%%%
-Lom Lobon title
 
+秘蹟の編み手『キルケー』
+%%%%
 Lom Lobon, Demon Lord of Forbidden Knowledge
-%%%%
-Louise title
 
+禁じられし知識の魔王『ロム・ロボン』
+%%%%
 Louise the Corrupted
-%%%%
-Mara title
 
+崩壊せし者『ルイーズ』
+%%%%
 Mara, Lord of Illusions
-%%%%
-Margery title
 
+幻影の王『マーラ』
+%%%%
 Margery the Dragonslayer
-%%%%
-Maud title
 
+ドラゴン殺し『マージェリー』
+%%%%
 Maud the Forgotten
-%%%%
-Maurice title
 
+忘れ去られし『モード』
+%%%%
 Maurice the Thief
-%%%%
-Menkaure title
 
+盗賊『モーリス』
+%%%%
 Menkaure, Prince of Dust
-%%%%
-Mennas title
 
+塵の貴公子『メンカウラー王』
+%%%%
 Mennas, the Voice of Zin
-%%%%
-Mnoleg title
 
+ジンの代弁者『メナス』
+%%%%
 Mnoleg, Demon Lord of Chaos
-%%%%
-Murray title
 
+混沌の魔王『ムノレグ』
+%%%%
 Murray the Demonic Talking Skull
-%%%%
-Natasha title
 
+物言う髑髏『マーリー』
+%%%%
 Natasha, Servant of Life and Death
-%%%%
-Nellie title
 
+生と死の下僕『ナターシャ』
+%%%%
 Nellie, Star of the Show
-%%%%
-Nergalle title
 
+興業の星『ネリー』
+%%%%
 Nergalle the Soulbinder
-%%%%
-Nessos title
 
+魂を縛る者『ネルガレ』
+%%%%
 Nessos the Markscentaur
-%%%%
-Nikola title
 
+射撃の名手『ネッソス』
+%%%%
 Nikola the Mad Inventor
-%%%%
-Pikel title
 
+狂気の発明者『ニコラ』
+%%%%
 Pikel the Slaver
-%%%%
-Polyphemus title
 
+奴隷使い『ピケル』
+%%%%
 Polyphemus the Watchful Shepherd
-%%%%
-Psyche title
 
+目敏き羊飼い『ポリュペモス』
+%%%%
 Psyche the Insane Magess
-%%%%
-Purgy title
 
+狂気の魔道師『サイキ』
+%%%%
 Purgy the Meek
-%%%%
-Robin title
 
+いくじなし『パージー』
+%%%%
 Robin of the Strong Arm
-%%%%
-Roxanne title
 
+剛腕の『ロビン』
+%%%%
 Roxanne, Geomancer Emeritus
-%%%%
-Rupert title
 
+名誉地霊術師『ロクサーヌ』
+%%%%
 Rupert the Wild
-%%%%
-Saint Roka title
 
+野生児『ルパート』
+%%%%
 Saint Roka the Messiah
-%%%%
-Sigmund title
 
+救世主『聖者ロカ』
+%%%%
 Sigmund the Dreaded
-%%%%
-Snorg title
 
+恐怖の『シグムンド』
+%%%%
 Snorg the Insatiable
-%%%%
-Sojobo title
 
+強欲なる『スノーグ』
+%%%%
 Sojobo, Queen of Tengu
-%%%%
-Sonja title
 
+天狗の女王『僧正坊』
+%%%%
 Sonja, the Graceful Assassin
-%%%%
-Terence title
 
+優美なる暗殺者『ソーニャ』
+%%%%
 Terence the Incautious
-%%%%
-Tiamat title
 
+うっかり者『テレンス』
+%%%%
 Tiamat, Avatar of the Dragonlord
-%%%%
-Urug title
 
+竜王の化身『ティアマト』
+%%%%
 Urug the Orcish Ballista
-%%%%
-Vashnia title
 
+オークの槍投手『ウルグ』
+%%%%
 Vashnia the Elite Marksnaga
-%%%%
-Xtahua title
 
+ナーガの精鋭射手『ヴァシュニア』
+%%%%
 Xtahua the Ancient
+
+古代竜『ザッハ』
 %%%%
