@@ -568,6 +568,8 @@ public:
     bool        tile_level_map_hide_sidebar;
     bool        tile_web_mouse_control;
 #endif
+
+    bool        vanilla_randart_name;
 #endif // USE_TILE
 
     typedef map<string, string> opt_map;
