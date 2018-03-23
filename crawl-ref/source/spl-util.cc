@@ -1355,9 +1355,10 @@ bool spell_no_hostile_in_range(spell_type spell)
 {
     const int range = calc_spell_range(spell, 0);
     const int minRange = get_dist_to_nearest_monster();
+
     switch (spell)
     {
-    // These don't target monsters.
+    // These don't target monsters or can target features.
     case SPELL_APPORTATION:
     case SPELL_CONJURE_FLAME:
     case SPELL_PASSWALL:
@@ -1365,10 +1366,8 @@ bool spell_no_hostile_in_range(spell_type spell)
     case SPELL_LRD:
     case SPELL_FULMINANT_PRISM:
     case SPELL_SUMMON_LIGHTNING_SPIRE:
-
-    // Shock and Lightning Bolt are no longer here, as the code below can
-    // account for possible bounces.
-
+    // This can always potentially hit out-of-LOS, although this is conditional
+    // on spell-power.
     case SPELL_FIRE_STORM:
         return false;
 
@@ -1419,18 +1418,21 @@ bool spell_no_hostile_in_range(spell_type spell)
     if (minRange < 0 || range < 0)
         return false;
 
+    const unsigned int flags = get_spell_flags(spell);
+
     // The healing spells.
-    if (testbits(get_spell_flags(spell), SPFLAG_HELPFUL))
+    if (testbits(flags, SPFLAG_HELPFUL))
         return false;
 
-    const bool neutral = testbits(get_spell_flags(spell), SPFLAG_NEUTRAL);
+    const bool neutral = testbits(flags, SPFLAG_NEUTRAL);
 
     bolt beam;
     beam.flavour = BEAM_VISUAL;
     beam.origin_spell = spell;
 
     zap_type zap = spell_to_zap(spell);
-    if (spell == SPELL_RANDOM_BOLT) // don't let it think that there are no susceptible monsters in range
+    // Don't let it think that there are no susceptible monsters in range
+    if (spell == SPELL_RANDOM_BOLT)
         zap = ZAP_DEBUGGING_RAY;
 
     if (zap != NUM_ZAPS)
@@ -1458,12 +1460,39 @@ bool spell_no_hostile_in_range(spell_type spell)
 #ifdef DEBUG_DIAGNOSTICS
         beam.quiet_debug = true;
 #endif
+
+        const bool smite = testbits(flags, SPFLAG_TARGET);
+
         for (radius_iterator ri(you.pos(), range, C_SQUARE, LOS_DEFAULT);
              ri; ++ri)
         {
             tempbeam = beam;
             tempbeam.target = *ri;
-            tempbeam.fire();
+
+            // For smite-targeted spells that aren't LOS-range.
+            if (smite)
+            {
+                // XXX These are basic checks that might be applicable to
+                // non-smiting spells as well. For those, the loop currently
+                // relies mostly on results from the temp beam firing, but it
+                // may be valid to exclude solid and non-reachable targets for
+                // all spells. -gammafunk
+                if (cell_is_solid(*ri) || !you.see_cell_no_trans(*ri))
+                    continue;
+
+                // XXX Currently Vile Clutch is the only smite-targeted area
+                // spell that isn't LOS-range. Spell explosion radii are not
+                // stored anywhere, defaulting to 1 for non-smite-targeting
+                // spells through bolt::refine_for_explosions() or being set in
+                // setup functions for the smite targeted explosions. It would
+                // be good to move basic explosion radius info into spell_desc
+                // or possibly zap_data. -gammafunk
+                tempbeam.ex_size = tempbeam.is_explosion ? 1 : 0;
+                tempbeam.explode();
+            }
+            else
+                tempbeam.fire();
+
             if (tempbeam.foe_info.count > 0
                 || neutral && tempbeam.friend_info.count > 0)
             {
